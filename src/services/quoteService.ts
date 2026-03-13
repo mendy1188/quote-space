@@ -3,7 +3,8 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Quote } from '../types';
 
 // Using API Ninjas Quotes API v2
-const API_KEY = 'sdJhUOiOWcD5I0zWURuIdJkJSVTNlf6kGAPrGW5o';
+// API Key should be stored securely, not hardcoded in production
+const API_KEY = process.env.EXPO_PUBLIC_API_NINJAS_KEY || 'sdJhUOiOWcD5I0zWURuIdJkJSVTNlf6kGAPrGW5o';
 
 const apiClient = axios.create({
   timeout: 15000,
